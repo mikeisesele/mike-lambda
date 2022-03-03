@@ -82,11 +82,18 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        // this uses the inline reified function to navgate to any activity at run time. 
-        
+        // this uses the inline reified function to navgate to any activity at run time.
+
         // use this to send data via intent to destination activity
+
+
+        // put all required info in the bundle object (data)
+        val data = Bundle()
+        
+        // pass the data as the third parameter to the method
          MikeUtils.navigateToActivity(this, DestinationActivity::class.java, data: Bundle)
          
+
          // use this to navigate to destination activity without sending data
          MikeUtils.navigateToActivity(this, DestinationActivity::class.java, null)
     }
