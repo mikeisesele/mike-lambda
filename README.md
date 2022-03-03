@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-
+        
         MikeUtils.toast(this, "Toast Message")
     }
 
@@ -83,8 +83,12 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         // this uses the inline reified function to navgate to any activity at run time. 
-        // functionality only ensures navigation. passing of data will be added in next release
-       MikeUtils.navigateToActivity(this, DestinationActivity::class.java) 
+        
+        // use this to send data via intent to destination activity
+         MikeUtils.navigateToActivity(this, DestinationActivity::class.java, data: Bundle)
+         
+         // use this to navigate to destination activity without sending data
+         MikeUtils.navigateToActivity(this, DestinationActivity::class.java, null)
     }
 
 }
