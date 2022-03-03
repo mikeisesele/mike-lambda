@@ -85,10 +85,13 @@ class MainActivity : AppCompatActivity() {
         // use this to send data via intent to destination activity
 
         // put all required info in the bundle object (data)
-        val data = Bundle()
+        val bundle = Bundle().apply { 
+            // put data in bundle here
+        }
+
         
         // pass the data as the third parameter to the method
-        MikeUtils.navigateToActivity(this, DestinationActivity::class.java, data: Bundle)
+        MikeUtils.navigateToActivity(this, DestinationActivity::class.java, bundle)
          
         // use this to navigate to destination activity without sending data
         MikeUtils.navigateToActivity(this, DestinationActivity::class.java, null)
