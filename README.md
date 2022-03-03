@@ -216,7 +216,7 @@ class ProgrammingJokesUseCaseImpl  @Inject constructor(private val jokesReposito
 }
 ```
 
-### Sealed class - Network request state manager
+### Network State Observer
 
 1. Initialize with application class - Method 1
 ```kotlin
