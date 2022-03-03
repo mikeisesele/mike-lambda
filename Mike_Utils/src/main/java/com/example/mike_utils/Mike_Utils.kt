@@ -3,6 +3,7 @@ package com.example.mike_utils
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -37,9 +38,14 @@ object MikeUtils {
         visibility = View.VISIBLE
     }
 
-    inline fun <reified T> navigateToActivity(context: Context, destination: T){
-        val intent = Intent(context, T::class.java)
-        context.startActivity(intent)
+    inline fun <reified T> navigateToActivity(context: Context, destination: T, data: Bundle?){
+        destination?.let {
+            val intent = Intent(context, it::class.java)
+            data?.let {
+                intent.putExtra("data", it)
+            }
+            context.startActivity(intent)
+        } ?: toast( context, "Choose an activity as your destination to navigate to")
     }
 
     fun askPermission(permission : String, context: Context, message : String) {
