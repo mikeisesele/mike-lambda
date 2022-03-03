@@ -19,7 +19,7 @@ allprojects {
 And add a dependency code to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation 'com.github.CodaarX:mike-lambda:1.0.0'
+     implementation 'com.github.CodaarX:mike-lambda:1.0.2'
 }
 ```
 
@@ -58,7 +58,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-
     override fun onResume() {
         super.onResume()
 
@@ -78,7 +77,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-
     override fun onResume() {
         super.onResume()
 
@@ -86,18 +84,15 @@ class MainActivity : AppCompatActivity() {
 
         // use this to send data via intent to destination activity
 
-
         // put all required info in the bundle object (data)
         val data = Bundle()
         
         // pass the data as the third parameter to the method
-         MikeUtils.navigateToActivity(this, DestinationActivity::class.java, data: Bundle)
+        MikeUtils.navigateToActivity(this, DestinationActivity::class.java, data: Bundle)
          
-
-         // use this to navigate to destination activity without sending data
-         MikeUtils.navigateToActivity(this, DestinationActivity::class.java, null)
+        // use this to navigate to destination activity without sending data
+        MikeUtils.navigateToActivity(this, DestinationActivity::class.java, null)
     }
-
 }
 ```
 
@@ -111,7 +106,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-
     override fun onResume() {
         super.onResume()
 
@@ -123,7 +117,6 @@ class MainActivity : AppCompatActivity() {
         // this also works
          MikePermission.askPermission(Manifest.permission.ACCESS_FINE_LOCATION, this, "Message")
     }
-
 }
 ```
 
@@ -137,13 +130,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-
     override fun onResume() {
         super.onResume()
 
          MikeGlide.setImage(view: ImageVIew, ImageURL: String) // provide the image view, and the string url of the image
     }
-
 }
 ```
 
@@ -157,7 +148,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-
     override fun onResume() {
         super.onResume()
 
@@ -166,7 +156,6 @@ class MainActivity : AppCompatActivity() {
             // Executors.newSingleThreadExecutor()
         }
     }
-
 }
 ```
 
@@ -179,7 +168,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
 
     override fun onResume() {
         super.onResume()
@@ -194,7 +182,6 @@ class MainActivity : AppCompatActivity() {
             negativeButtonClickHandler() // function to invoke negative response
         )
     }
-
 }
 ```
 
@@ -266,7 +253,6 @@ class MainActivity : AppCompatActivity() {
        }
     }
 }
-
 ```
 
 2. Initialize with application context in main activity - Method 2
@@ -289,20 +275,16 @@ class MainActivity : AppCompatActivity() {
         
         // OR
         
-        
         // observe the network directly
        MikeNetworkLiveData.observe(this) {
             if (it) {
                 // perform some operations here
+                }
             }
-       }
-    }
-
+        }
     }
 }
 ```
-
-
 
 # License
 ```xml
