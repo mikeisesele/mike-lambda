@@ -3,7 +3,7 @@
 
 Generic library to provide base functionality for faster developement<br>
 
-## Including in your project
+## Include in your project
 [![JitPack](https://jitpack.io/v/skydoves/BaseRecyclerViewAdapter.svg)](https://jitpack.io/#CodaarX/mike-lambda/1.0.0)</br>
 
 
