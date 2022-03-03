@@ -105,6 +105,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         // functionality only request for a single permission
+        // message is a message to be displayed if the permission was denied.
         MikeUtils.askPermission(Manifest.permission.ACCESS_FINE_LOCATION, this, "Message")
         MikeUtils.askPermission(PERMISSION_NAME_HERE), this, "Message")
         
