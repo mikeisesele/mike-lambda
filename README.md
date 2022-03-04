@@ -1,4 +1,4 @@
-# Mike multipurpose library <br>
+#  multi library <br>
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Generic library to provide base functionality for faster developement<br>
