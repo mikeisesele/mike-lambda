@@ -61,7 +61,9 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-         MikeUtils.log(T) //  the log call is a generic and takes in any data type. Strings, Array, custom objects etc.
+         MikeUtils.log(T) 
+         //  the log call is a generic and takes in any data type. Strings, Array, custom objects etc.
+         // In your logcat, type in INFORMATION in your filter bar. with scope set to debug 
     }
 
 }
