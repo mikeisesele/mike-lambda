@@ -8,7 +8,7 @@ Generic library to provide base functionality for faster developement<br>
 
 
 #### Gradle
-Add below codes to your **root** `build.gradle` file (not your module build.gradle file).
+For android studio versions before BumbleBee, Add below codes to your **root** `build.gradle` file (not your module build.gradle file).
 ```gradle
 allprojects {
     repositories {
@@ -16,6 +16,20 @@ allprojects {
     }
 }
 ```
+
+For android studio BumbleBee and above, Add below codes to your `settings.gradle` file.
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral() // add this line
+        maven { url "https://jitpack.io" } // add this line
+    }
+}
+```
+
+
 And add a dependency code to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
